@@ -1,3 +1,14 @@
+# v2.0
+## 28-09-2025
+
+1. [](#improved)
+    * CHANGELOG date formats! (8031e1f)
+    * name reflecting revived development (8031e1f)
+    * requires Grav 1.7 min (8031e1f)
+
+1. [](#new)
+    * demo pages and site config from official skeleton so it can work out of the box without the skeleton (8031e1f)
+
 # v1.4.0
 ## 15-01-2021
 
