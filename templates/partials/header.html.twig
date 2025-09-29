@@ -39,11 +39,11 @@
       <span class="screen-reader-text">Menu</span>
       </button>
 
-      {% if singular %}
+      {% if sequence_member|default(false) %}
       <nav class="navigation post-navigation links-count-2" role="navigation">
         <h1 class="screen-reader-text">Post navigation</h1>
         <div class="nav-links">
-          {% if page.nextSibling.url %}
+          {% if not page.isFirst %}
           <div class="nav-next nav-link has-post-thumbnail">
             <a rel="next"  href="{{ page.nextSibling.url }}">
               <span class="post-title">
@@ -53,7 +53,7 @@
           </div>
           {% endif %}
 
-          {% if page.prevSibling.url %}
+          {% if not page.isLast %}
           <div class="nav-previous nav-link has-post-thumbnail">
             <a rel="prev" href="{{ page.prevSibling.url }}">
               <span class="post-title">
