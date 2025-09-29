@@ -2,9 +2,13 @@
    <div class="site-footer-area footer-area-site-info">
       <div class="site-info-container">
          <div class="site-info" role="contentinfo">
-           {% if site.copyright %}
-           {{ site.copyright|raw }}
-           {% endif %}
+            {% block site_rights %}
+            {% if site.copyright %}
+               {{ site.copyright|raw }}
+            {% elseif site.author.name %}
+               © {{ date|date('Y') }} {{ site.author.name }}{# | <a href="/meta">Credits</a> #}
+            {% endif %}
+            {% endblock %}
          </div>
       </div>
    </div>
