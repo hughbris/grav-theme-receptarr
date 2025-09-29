@@ -1,8 +1,4 @@
 en:
-  SITE:
-    TITLE: My Blog
-    DESCRIPTION: Blogging about stuff
-    COPYRIGHT: © Copyright %s Your Company
   ADMIN:
     RECIPE: Recipe
     DESCRIPTION: Description
@@ -29,10 +25,6 @@ en:
   TOPICS: topics
 
 el:
-  SITE:
-    TITLE: To blog μου
-    DESCRIPTION: Blogging για την ουσία
-    COPYRIGHT: © Δικαιώματα %s Η εταιρία σας
   SUBSCRIBE: Εγγραφή
   TWEET: Tweet
   SHARE: Κοινοποίηση
@@ -41,10 +33,6 @@ el:
   READ_MORE: Διαβάστε περισσότερα
 
 es:
-  SITE:
-    TITLE: Mi Blog
-    DESCRIPTION: Blogeando sobre cosas
-    COPYRIGHT: © Copyright %s Tu Compañía
   SUBSCRIBE: Suscribir
   TWEET: Twittear
   SHARE: Compartir
@@ -53,10 +41,6 @@ es:
   READ_MORE: Leer Más
 
 cs:
-  SITE:
-    TITLE: Můj blog
-    DESCRIPTION: Blogování o všem možném
-    COPYRIGHT: © Copyright %s Moje společnost
   SUBSCRIBE: Odebírat
   TWEET: Tweet
   SHARE: Sdílet
@@ -65,10 +49,6 @@ cs:
   READ_MORE: Čtěte více
 
 de:
-  SITE:
-    TITLE: Mein Blog
-    DESCRIPTION: Blogging über dies und das
-    COPYRIGHT: © Copyright %s deine Firma
   ADMIN:
     RECIPE: Rezept
     DESCRIPTION: Beschreibung
@@ -86,10 +66,6 @@ de:
   READ_MORE: Lesen Sie weiter
 
 it:
-  SITE:
-    TITLE: Il mio blog
-    DESCRIPTION: Blogging su questo e su quello
-    COPYRIGHT: Tutti i diritti riservati © %s Società
   SUBSCRIBE: Abbonati
   TWEET: Twitta
   SHARE: Condividi
@@ -98,10 +74,6 @@ it:
   READ_MORE: Per saperne di più
 
 fi:
-  SITE:
-    TITLE: Minun blogini
-    DESCRIPTION: Bloggaan
-    COPYRIGHT: © Tekijänoikeus %s Oma Yritys
   SUBSCRIBE: Tilaa
   TWEET: Twiittaa
   SHARE: Jaa
@@ -110,10 +82,6 @@ fi:
   READ_MORE: Lue lisää
 
 fr:
-  SITE:
-    TITLE: Mon blogue
-    DESCRIPTION: Blog à propos de tout et de rien
-    COPYRIGHT: © Copyright %s Votre Entreprise
   SUBSCRIBE: Abonnez-vous
   TWEET: Twittez
   SHARE: Partagez
@@ -131,10 +99,6 @@ fr:
   TOPICS: thèmes
 
 nl:
-  SITE:
-      TITLE: Mijn Blog
-      DESCRIPTION: Bloggen over vanalles en nog wat
-      COPYRIGHT: Copyright © %s Uw Bedrijf
   SUBSCRIBE: Abonneren
   TWEET: Tweet
   SHARE: Delen
@@ -143,10 +107,6 @@ nl:
   READ_MORE: Read More
 
 nb:
-  SITE:
-    TITLE: Min Blogg
-    DESCRIPTION: Blog om ting og tang
-    COPYRIGHT: © Opphavsrett %s Ditt Selskap
   SUBSCRIBE: Abonner
   TWEET: Tweet
   SHARE: Del
@@ -155,10 +115,6 @@ nb:
   READ_MORE: Les mer
 
 pl:
-  SITE:
-    TITLE: Mój blog
-    DESCRIPTION: Blog o wszystkim
-    COPYRIGHT: © Copyright %s Twoja firma
   SUBSCRIBE: Subskrypcja
   TWEET: Tweet
   SHARE: Podziel się
@@ -176,10 +132,6 @@ pl:
   TOPICS: posty
 
 pt:
-  SITE:
-    TITLE: O meu blog
-    DESCRIPTION: Blogando sobre coisas
-    COPYRIGHT: © Copyright %s Empresa
   SUBSCRIBE: Subscrever
   TWEET: Twittar
   SHARE: Partilhar
@@ -188,10 +140,6 @@ pt:
   READ_MORE: Leia mais
 
 ro:
-  SITE:
-    TITLE: Blog-ul meu
-    DESCRIPTION: Blogging despre diferite lucruri
-    COPYRIGHT: © Copyright %s Compania ta
   SUBSCRIBE: Abonează-te
   TWEET: Tweet
   SHARE: Distribuie
@@ -200,10 +148,6 @@ ro:
   READ_MORE: Citeste mai mult
 
 ru:
-  SITE:
-    TITLE: Мой блог
-    DESCRIPTION: Блог о разном
-    COPYRIGHT: © Все права защищены %s Ваша компания
   SUBSCRIBE: Подписаться
   TWEET: Твит
   SHARE: Поделиться

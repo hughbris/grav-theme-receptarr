@@ -1,9 +1,9 @@
 <header id="masthead" class="site-header" >
   <div class="site-branding">
     <h1 class="site-title logo type-text">
-      <a href='{{ base_url_absolute }}'>{{ 'SITE.TITLE'|t }}</a>
+      <a href='{{ home_url }}'>{{ site.title }}</a>
     </h1>
-    <h2 class="site-description">{{ 'SITE.DESCRIPTION'|t }}</h2>
+    <h2 class="site-description">{{ site.metadata.description }}</h2>
   </div>
 
   <section id="secondary" class="secondary">
@@ -11,9 +11,9 @@
       <div class="secondary-content-container">
         <div class="site-branding">
           <h1 class="site-title logo type-text">
-            <a href='{{ base_url_absolute }}'>{{ 'SITE.TITLE'|t }}</a>
+            <a href='{{ home_url }}'>{{ site.title }}</a>
           </h1>
-          <h2 class="site-description">{{ 'SITE.DESCRIPTION'|t }}</h2>
+          <h2 class="site-description">{{ site.metadata.description }}</h2>
         </div>
          <nav id="site-navigation" class="main-navigation" role="navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
             <span class="screen-reader-text">Receptar site navigation</span>
