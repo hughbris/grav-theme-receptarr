@@ -1,4 +1,18 @@
-# v2.0
+# v2.1.0
+## 29-09-2025
+
+1. [](#improved)
+    * use home_url not base_url_absolute in templates (15ed8cc)
+    * take site values from site.yaml in templates, not translations (15ed8cc)
+    * more sensible screen reader text (640b5b9)
+    * better variables/expressions in header template (3f28780, 470b07d)
+    * support `site.author.name` as copyright fallback in footer (8b0bdaf)
+
+1. [](#new)
+    * page_title block in header (382b1a0)
+    * site_rights block in footer (8b0bdaf)
+
+# v2.0.0
 ## 28-09-2025
 
 1. [](#improved)
