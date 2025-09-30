@@ -1,4 +1,4 @@
-title: Receptar
+title: Receptarr
 description: "A very delicious blog."
 author:
   name: Grav
@@ -10,7 +10,7 @@ author:
 blog:
   route: ''
 metadata:
-    description: 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
+    description: 'Receptarr is a minimal Theme designed for blogger, converted to Grav.'
 taxonomies: [category,tag,month]
 
 summary:
