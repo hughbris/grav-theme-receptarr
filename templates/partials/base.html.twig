@@ -13,23 +13,23 @@
   <link href='//fonts.googleapis.com/css?family=Roboto+Slab%3A400%2C700&ver=4.2.2' id='roboto-slab-css' media='all' rel='stylesheet' type='text/css'/>
   <meta name="google-translate-customization" content="{{ site.google_translate_token }}">
   {% block stylesheets %}
-    {% do assets.addCss('theme://css/slick.css') %}
-    {% do assets.addCss('theme://genericons/genericons.css') %}
-    {% do assets.addCss('theme://css/starter.css') %}
-    {% do assets.addCss('theme://css/style.css') %}
-    {% do assets.addCss('theme://css/colors.css') %}
-    {% do assets.addCss('theme://css/jetpack.css') %}
-    {% do assets.addCss('theme://css/lightbox.css') %}
-    {% do assets.addCss('theme://css/custom.css') %}
+    {% style 'theme://css/slick.css' %}
+    {% style 'theme://genericons/genericons.css' %}
+    {% style 'theme://css/starter.css' %}
+    {% style 'theme://css/style.css' %}
+    {% style 'theme://css/colors.css' %}
+    {% style 'theme://css/jetpack.css' %}
+    {% style 'theme://css/lightbox.css' %}
+    {% style 'theme://css/custom.css' %}
     {% if browser.getBrowser == 'msie' and browser.getVersion >= 7 and browser.getVersion <= 8 %}
-      {% do assets.addCss('theme://css/ie.css') %}
+      {% style 'theme://css/ie.css' %}
     {% endif %}
   {% endblock %}
 
   {% block javascripts %}
-    {% do assets.add('jquery',101) %}
-    {% do assets.add('theme://js/slick.min.js') %}
-    {% do assets.add('theme://js/scripts-global.js') %}
+    {% script 'jquery' priority: 101 %}
+    {% script 'theme://js/slick.min.js' %}
+    {% script 'theme://js/scripts-global.js' %}
     {% script 'theme://js/custom.js' %}
   {% endblock %}
 
@@ -37,13 +37,14 @@
   <style id='receptar-stylesheet-inline-css' type='text/css'>.entry-media{background-image:url({% if page.media.images|first %}{{ page.media.images|first.url }}{% else %}{{ theme_url }}/images/{{ site.global_featured_image }}{% endif %})}</style>
   {% endif %}
 
-
   {% block assets deferred %}
     {{ assets.css()|raw }}
-      {{ assets.js()|raw }}
+    {{ assets.js()|raw }}
+    {{ dump(assets.getJs) }}
   {% endblock %}
 {% endblock head %}
 </head>
+
 <body id="top" class="{% if template_body_classes %}{{ template_body_classes }}{% else %}fl-builder blog has-featured-posts is-not-singular{% endif %}{{ page.header.body_classes }}">
   <div id="page" class="hfeed site">
     <div class="site-inner">
