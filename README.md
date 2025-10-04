@@ -280,10 +280,27 @@ Slideshow images must be placed inside user theme **images/slideshow** directory
 
 ### Featured image
 
-To customize featured image, add or modify following variable in site.yaml:
+Two-column, split-style pages in this theme use a bright "feature" image in one column.
+
+![Screenshot of a Receptarr two column page with feature image](receptarr-two-columns.png)
+
+For each page using a feature image, you can upload and select a feature image for that page. You can select this in Grav's Admin when editing the page, or manually in the page frontmatter like this:
 
 ```yaml
-global_featured_image: featured.jpg
+feature:
+  source: FILENAME.jpg
 ```
+The file _must be in the page folder_ with the page (i.e. _page media_). You only need to provide the file name.
 
-Featured images must be placed inside user theme **images** directory. Featured images is used on empty blog image posts and on posts without image (due to split-screen layout concept).
+**If you don't specify a feature image**, Receptarr will try to use the first image in the page folder. **If that isn't present**, Receptarr comes bundled with a global fallback image which it will use. You can change that fallback in either Grav Admin in the theme settings, or by editing your copy of Receptarr's theme configuration file by hand.
+
+```yaml
+fallback_image: MY_FALLBACK.jpg
+```
+Again you only need to specify the filename, but the image _must be placed_ in the theme's `images` folder.
+
+### Blog post pages
+
+Note that blog post grid listings use images to preview each blog post. These listings use each blog post's featured image, determined by the same rules of precedence outined above.
+
+![Screenshot of Receptarr's grid listing of blog post previews](receptarr-blog-post-panels.png)
