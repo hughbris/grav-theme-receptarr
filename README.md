@@ -2,71 +2,189 @@
 
 ![Receptarr](assets/readme_1.png)
 
-Receptarr is simple, modern, responsive, high-DPI, fully customizable, stylish blog Grav theme by [WebMan Design](http://themedemos.webmandesign.eu/).
-It features split-screen book-like design inspired by a modern cook book with emphasize on beautiful imagery and typography.
+Receptarr is an adpatation of a self-described simple, modern, responsive, high-DPI, fully customizable, stylish blog Grav theme by [WebMan Design](http://themedemos.webmandesign.eu/).
+
+It features split-screen book-like design inspired by a ~~modern~~ cook book with emphasis on beautiful imagery and typography.
 
 # Features
 
-* Navigation menu included
+* Navigation menu
 * Split-screen book-like design
 * Collapsible sidebar
-* Blog Layout with support for Recipes
+* Blog Layout with support for recipes
 * Beautiful imagery and typography.
-* Social Sharing
-* Browser Compatibility
-* Supports YouTube
-* Supports SoundCloud
-* Supports Vimeo
-* SimpleSearch support
-* Feeds
-* RelatedPosts plugin support
-* Archives plugin support
-* JSComments plugin support
-* Comments and Forms plugin support
+* Social sharing
+* Browser compatibility
 * Basic translations for 14 languages
 
 # Installation
 
-Installing the Receptarr theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
+Installing the Receptarr theme can be done in a few ways:
 
-## GPM Installation (Preferred)
+* [Grav Package Manager (GPM) `direct-install` options](#gpm-direct-install-options):
+  * [command line version](#command-line-interface-cli);
+  * [Grav Admin plugin's web interface version](#in-the-grav-admin-front-end);
+* manually:
+  * via [zip file](#extract-a-zip-file);
+  * via [tarball](#extract-a-tarball);
+  * with [`git clone`](#clone-with-git);
+* [using `.dependencies`](#install-using-dependencies).
 
-The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
+> Note that the Receptarr theme is not currently included in the official Grav theme repository, so the standard GPM `install` command _by theme name_ won't work.
 
-    bin/gpm install receptarr
+## GPM direct install options
 
-This will install the Receptarr theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/receptarr`.
+The Grav Package Manager's [`direct-install` command](#command-line-interface-cli), or its [_Direct Install_ front end](#in-the-grav-admin-front-end) in Grav Admin, provide quite a simple way to install an unlisted theme.
+
+  > Using the direct install options for unofficial plugins and themes **will throw a security error** _unless_ you allow installing from unofficial sources in your Grav system settings. The error on the command line interface will look something like this:
+  >
+  ```
+  Preparing to install https://github.com/hughbris/grav-theme-receptarr/archive/refs/heads/develop.zip
+    |- Downloading package...     0%
+    `- ERROR: Only official GPM URLs are allowed. You can modify this behavior in the System configuration.
+  ```
+  > The setting to modify is [`gpm.official_gpm_only` in `user/config/system.yaml`](https://learn.getgrav.org/17/basics/grav-configuration#gpm). You can also [modify the "_Official GPM Only_" setting from Grav's Admin web interface](https://learn.getgrav.org/17/admin-panel/dashboard/configuration-system#advanced) if you have system administrator permissions. **Note that this is a security setting you may want to re-enable after installing this theme.**
+
+### Command line interface (CLI)
+
+If you are comfortable using your system's terminal (command line), the simplest way may be to install this theme via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) `direct-install` sub-command.
+
+#### Variation A: by URL
+
+From the root of your Grav install, type:
+
+    bin/gpm direct-install https://github.com/hughbris/grav-theme-receptarr/archive/refs/heads/develop.zip
+
+#### Variation B: download first
+
+Find the latest release zip file at https://github.com/hughbris/grav-theme-receptarr/archive/refs/heads/develop.zip (same as Variation A above) or browse for [other versions on Github](https://github.com/hughbris/grav-theme-receptarr/releases). Download your file and place it somewhere that Grav can see.
+
+Then in your terminal, at the root of yor Grav install, you can issue the command:
+
+    bin/gpm direct-install ~/LOCATION-OF-ZIP-FILE/NAME-OF-ZIP-FILE.zip
+
+---
+
+Both variations will install the `develop` branch of Receptarr theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/receptarr`.
+
+> If you want to install a tag release or other branch, replace the URL filename prefix with the tag or branch name, e.g. _https://github.com/hughbris/grav-theme-receptarr/archive/refs/heads/2.1.0.zip_. You can browse "releases" at https://github.com/hughbris/grav-theme-receptarr/releases. _Choose the zip file URL because it seems the tarball format is not supported by `direct-install`._
+
+### In the Grav Admin front end
+
+If these are true:
+
+* you have installed Grav's Admin plugin;
+* you have system administration permissions in Grav Admin;
+* you prefer using graphical user interfaces over terminals.
+
+…then you can also easily install Receptarr using the `direct-install` web front end.
+
+Again there are two options and they mirror the two variations of the [command line version](#command-line-interface-cli) outlined above.
+
+Once logged in, [navigate to the _Tools_ menu and then find the _Direct Install_ tab](https://learn.getgrav.org/17/admin-panel/tools).
+
+![Grav Admin UI showing Direct Install options](receptarr-admin-install.png)
+
+The first option, "**Install Package via Direct ZIP Upload**", provides a front end to [Variation B](#variation-b-download-first). Here too, you just need a zip file which you can download from the same places. Then use the _Browse_ button to find and select it, and then hit the _Upload and install_ button.
+
+The last option, "**Install Package via Remote URL Reference**" is just like [Variation A](#variation-a-by-url) above. You only need to select a URL in the same places and paste it into the text box here. Then hit the _Install_ button.
+
+> Grav's official online manual [explains this in more detail](https://learn.getgrav.org/17/admin-panel/tools) if you need it.
 
 ## Manual Installation
 
-To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `receptarr`. You can find these files either on [GitHub](https://github.com/hughbris/grav-theme-receptarr) or via [GetGrav.org](http://getgrav.org/downloads/themes).
+### Extract a zip file
+
+To install this theme **via zip file**, just download the [zip version of this repository](https://github.com/hughbris/grav-theme-receptarr/archive/refs/heads/develop.zip) and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `receptarr`. You can find zip files on [GitHub](https://github.com/hughbris/grav-theme-receptarr).
 
 You should now have all the theme files under
 
     /your/site/grav/user/themes/receptarr
 
->> NOTE: This theme is a modular component for Grav which requires the [Grav](http://github.com/getgrav/grav), [Error](https://github.com/getgrav/grav-theme-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins.
+### Extract a tarball
+
+You can also find **tarballs** by following under the [_Releases_ heading](https://github.com/hughbris/grav-theme-receptarr/releases) on Github's repository sidebar (on desktop), and then selecting a release. Then you can download it, move to your sites's `themes` directory using a command line, and issue:
+
+```sh
+mkdir receptarr && tar -zxvpf ~/LOCATION-OF-TARBALL/NAME-OF-TARBALL.tar.gz -C receptarr --strip-components=1
+```
+
+### Clone with git
+
+You might find it easiest to **install via git**. If you are in a command line (terminal prompt) at your site's themes directory, this command should do the trick:
+
+```sh
+git clone https://github.com/hughbris/grav-theme-receptarr.git receptarr
+```
+
+> Check out a specific branch or tag using the `-b` argument, e.g. `git clone -b 2.1.0 https://github.com/hughbris/grav-theme-receptarr.git receptarr`.
+
+## Install using `.dependencies`
+
+Grav's command line interface `install` command will consult a YAML manifest of themes and plugins to install. You'll find Grav's default dependencies in a file called `.dependencies` in Grav's root directory. You can edit this to add more plugins and themes. This provides a few advantages:
+
+* you can easily reconstruct your site's dependencies on a new install;
+* it's possible to install plugins and themes from any git URL, they don't need to be in the official repositories;
+* select a specific tag or branch of a dependency, or pin your installation to one that you know works;
+* allows you to easily update and upgrade your dependencies by running the `install` command again.
+
+The file format has some redundancy and consists of two top-level YAML properties. The convention is to list dependencies in alphabetical order but it's not necessary:
+
+* Under `git:`, add your Receptarr repository URL and branch or tag:
+  ```yaml
+  git:
+      …
+      receptarr:
+          url: https://github.com/hughbris/grav-theme-receptarr
+          path: user/themes/receptarr
+          branch: develop # could also be a tag like 2.2.0
+      …
+  ```
+* Under `links:`, add some further information for the installation:
+  ```yaml
+  links:
+      …
+      receptarr:
+          src: grav-theme-receptarr
+          path: user/themes/receptarr
+          scm: github
+      …
+  ```
+
+Then in a terminal at the root of your Grav site, run this command:
+
+```sh
+bin/grav install
+```
 
 # Updating
 
-As development for the Receptarr theme continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience. Updating Receptarr is easy, and can be done through Grav's GPM system, as well as manually.
+As development for the Receptarr theme continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience.
 
-## GPM Update (Preferred)
+Unlike themes that are in [Grav's official Themes repository](https://getgrav.org/downloads/themes), almost every update method will involve deleting the old version and reinstalling Receptarr as per the [installation methods outlined above](#installation).
 
-The simplest way to update this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
+## Update with git
 
-    bin/gpm update receptarr
+If you installed Receptarr manually using the [git clone method](#clone-with-git), you can simply move into the theme directory at the command line and issue:
 
-This command will check your Grav install to see if your Receptarr theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
+```sh
+git pull
+```
+
+That's it! _(\*as long as this runs smoothly)_
+
+## Update using dependencies file
+
+If you installed [using the `.dependencies` file](#install-using-dependencies), you can simply run through that process again. Grav's installer will check for updates in this process. **Note that all plugins and themes in this file will be updated if available**, which you may not necessarily want. If you want to only update Receptarr and not touch any other dependencies, follow the [manual update process outlined](#manual-update) here below.
+
+> `bin/grav install` won't uninstall any plugins or themes that your remove from your dependencies file.
 
 ## Manual Update
 
 Manually updating Receptarr is pretty simple. Here is what you will need to do to get this done:
 
 * Delete the `your/site/user/themes/receptarr` directory.
-* Download the new version of the Receptarr theme from either [GitHub](https://github.com/hughbris/grav-theme-receptarr) or [GetGrav.org](http://getgrav.org/downloads/themes).
-* Unzip the zip file in `your/site/user/themes` and rename the resulting folder to `receptarr`.
-* Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
+* Follow any [installation process](#installation) outlined above.
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
 
