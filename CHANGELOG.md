@@ -1,15 +1,25 @@
+# v2.2.0
+## 04-10-2025
+
+1. [](#improved)
+    * greatly expanded install instructions in README for unlisted guerilla themes (cb66bfb)
+1. [](#new)
+    * several blocks for extending header template (cb18ef5)
+    * move share buttons into own template (62f9835)
+1. [](#bugfix)
+    * add custom JS to force scroll of menu sidebar to top on pageload (80b9dd7)
+
 # v2.1.0
 ## 29-09-2025
 
 1. [](#improved)
-    * use home_url not base_url_absolute in templates (15ed8cc)
+    * use `home_url` not `base_url_absolute` in templates (15ed8cc)
     * take site values from site.yaml in templates, not translations (15ed8cc)
     * more sensible screen reader text (640b5b9)
     * better variables/expressions in header template (3f28780, 470b07d)
     * support `site.author.name` as copyright fallback in footer (8b0bdaf)
-
 1. [](#new)
-    * page_title block in header (382b1a0)
+    * page_title block in page head (382b1a0)
     * site_rights block in footer (8b0bdaf)
 
 # v2.0.0
@@ -19,7 +29,6 @@
     * CHANGELOG date formats! (8031e1f)
     * name reflecting revived development (8031e1f)
     * requires Grav 1.7 min (8031e1f)
-
 1. [](#new)
     * demo pages and site config from official skeleton so it can work out of the box without the skeleton (8031e1f)
 
