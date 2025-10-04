@@ -29,3 +29,12 @@ form:
           0: PLUGIN_ADMIN.DISABLED
         validate:
           type: bool
+    fallback_image:
+        type: filepicker
+        folder: 'theme://images'
+        label: ADMIN.FEATURES.FALLBACK.LABEL
+        help: ADMIN.FEATURES.FALLBACK.HELP
+        preview_images: true
+        accept:
+            - .png
+            - .jpg
