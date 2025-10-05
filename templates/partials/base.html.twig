@@ -7,11 +7,13 @@
   <title>{% block page_title %}{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.title|e('html') }}{% endblock %}</title>
   {% include 'partials/metadata.html.twig' %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png" />
-  <link rel='stylesheet' id='receptar-google-fonts-css' href='//fonts.googleapis.com/css?family=Roboto%7CRoboto+Condensed%3A400%2C300%7CAlegreya%3A400%2C700&#038;subset&#038;ver=44d4db587900ff753163772c910c3b34' type='text/css' media='all'/>
-  <link href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' rel='stylesheet'/>
-  <link href='//fonts.googleapis.com/css?family=Roboto+Slab%3A400%2C700&ver=4.2.2' id='roboto-slab-css' media='all' rel='stylesheet' type='text/css'/>
-  <meta name="google-translate-customization" content="{{ site.google_translate_token }}">
+
+  {% block links %}
+    {% set favicon_path = 'theme://images/favicon.png' %}
+    {% set favicon = media[favicon_path] %} {# idky: favicon.url returns a screwy URL #}
+    {% link icon "#{favicon_path}" with { type: favicon.mime } %} {# favicon_path must be a quoted string expression here or Twig won't parse #}
+  {% endblock %}
+
   {% block stylesheets %}
     {% style 'theme://css/slick.css' %}
     {% style 'theme://genericons/genericons.css' %}
@@ -52,9 +54,9 @@
   {% endif %}
 
   {% block assets deferred %}
+    {{ assets.link()|raw }}
     {{ assets.css()|raw }}
     {{ assets.js()|raw }}
-    {{ dump(assets.getJs) }}
   {% endblock %}
 {% endblock head %}
 </head>
