@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   {% block links %}
-    {% set favicon_path = 'theme://images/favicon.png' %}
+    {% set favicon_path = 'theme://images/' ~ theme_config.favicon_image|default('favicon.png') %}
     {% set favicon = media[favicon_path] %} {# idky: favicon.url returns a screwy URL #}
     {% link icon "#{favicon_path}" with { type: favicon.mime } %} {# favicon_path must be a quoted string expression here or Twig won't parse #}
   {% endblock %}
