@@ -304,3 +304,19 @@ Again you only need to specify the filename, but the image _must be placed_ in t
 Note that blog post grid listings use images to preview each blog post. These listings use each blog post's featured image, determined by the same rules of precedence outined above.
 
 ![Screenshot of Receptarr's grid listing of blog post previews](receptarr-blog-post-panels.png)
+
+### Site icon ("favicon")
+
+Your site's _favicon_ is a small, square image that was originally intended to show alongside your site title in a list of browser bookmarks. That has been expanded, and there are now any number of places where your site's favicon can appear. Most browsers show favicons on open browser tabs now, and search engines often show them next to search results. They appear in all kinds of contexts and are very important.
+
+Favicons should be both square and small. Usually 256x256 pixels is enough.
+
+Receptarr comes bundled with a default favicon image which you should change for your site. The setting is stored in the theme's configuration YAML file:
+
+```yaml
+favicon_image: MY_FAVICON.png
+```
+
+You only need to specify the filename, but the image _must be placed_ in the theme's `images` folder.
+
+You can also change this setting through Grav's Admin under the Receptarr theme settings.
