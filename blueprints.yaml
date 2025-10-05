@@ -38,3 +38,12 @@ form:
         accept:
             - .png
             - .jpg
+    favicon_image:
+        type: filepicker
+        folder: 'theme://images'
+        label: ADMIN.FAVICON.LABEL
+        help: ADMIN.FAVICON.HELP
+        preview_images: true
+        accept:
+            - .png
+            - .jpg

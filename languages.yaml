@@ -15,6 +15,9 @@ en:
       FALLBACK:
         LABEL: Default (fallback) image
         HELP: This fills the void on pages where no feature image is specified or available.
+    FAVICON:
+      LABEL: Site icon
+      HELP: Known as the 'favicon', this image appears in the browser tab, bookmark lists, sometimes in search engine display, and in other contexts. It's very important. The image should be small and square, no larger than 512x512 pixels.
   SUBSCRIBE: Subscribe
   TWEET: Tweet
   SHARE: Share
