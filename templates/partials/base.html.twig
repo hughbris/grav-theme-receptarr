@@ -26,6 +26,9 @@
     {% if browser.getBrowser == 'msie' and browser.getVersion >= 7 and browser.getVersion <= 8 %}
       {% style 'theme://css/ie.css' %}
     {% endif %}
+    {% style '//fonts.googleapis.com/css?family=Roboto%7CRoboto+Condensed%3A400%2C300%7CAlegreya%3A400%2C700&#038;subset&#038;ver=44d4db587900ff753163772c910c3b34' priority: 102 with { media: 'all', id: 'receptar-google-fonts-css' } %}
+    {% style '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' priority: 101 %}
+    {% style '//fonts.googleapis.com/css?family=Roboto+Slab%3A400%2C700&ver=4.2.2' priority: 100 with { media: 'all', id: 'roboto-slab-css' } %}
   {% endblock %}
 
   {% block javascripts %}
