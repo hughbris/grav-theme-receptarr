@@ -1,14 +1,27 @@
 <article id="post-{{ loop.index }}" class="post-{{ loop.index }} post type-post status-publish format-standard has-post-thumbnail hentry category-cakes tag-no-excerpt">
 
   <div class="entry-media {% if truncate %}entry-{% if page.header.youtube or page.header.soundcloud or page.header.vimeo %}video{% else %}image{% endif %}{% else %} resp_video{% endif %}">
-    <figure class="post-thumbnail"> {# TODO: determine if @alt would add value here #}
-      {% set img_classes = 'attachment-receptar-featured size-receptar-featured wp-post-image' %}
+    <figure class="post-thumbnail">
       {% if page.header.feature.source and page.media.images[page.header.feature.source] %}
-        {{ page.media.images[page.header.feature.source].cropZoom(338,451).html(null, '', img_classes)|raw }}
-      {% elseif page.media.images|first %}
-        {{ page.media.images|first.cropZoom(338,451).html(null, '', img_classes)|raw }}
+        {% set figure = page.media.images[page.header.feature.source] %}
+      {% elseif page.media.images is not empty %}
+        {% set figure = page.media.images|first %}
+      {% elseif theme_config.fallback_image %}
+        {% set fallback = theme_config.fallback_image|first %}
+        {% set figure = media["user://images/#{fallback['name']}"] %}
+      {% elseif site.global_featured_image and media["theme://images/#{site.global_featured_image}"] %} {# support and deprecate this to make migrations smoother #}
+        {{ debug('site.global_featured_image is deprecated since 2.3.0, please use fallback_image in receptarr.yaml') }}
+        {% set figure = media["theme://images/#{site.global_featured_image}"] %}
       {% else %}
-        <img class="{{ img_classes }}" src="{{ theme_url }}/images/{{ theme_config.fallback_image }}" alt="">
+        {% set figure = media["theme://images/#{default_feature_filename}"] %}
+      {% endif %}
+
+      {% if figure %}
+        {% set figure_classes = 'attachment-receptar-featured size-receptar-featured wp-post-image' %} {# nonsense #}
+        {# TODO: determine if @alt would add value here #}
+        {{ figure.cropZoom(338,451).html(null, '', figure_classes)|raw }}
+      {% else %}
+        {{ debug('partials/blog_item: No valid figure image found and no valid fallback or theme default!') }}
       {% endif %}
     </figure>
   </div>

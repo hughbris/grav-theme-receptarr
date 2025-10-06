@@ -1,4 +1,5 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set default_feature_filename = 'featured.jpg' %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" class='{% if browser.getBrowser == 'msie' and browser.getVersion == 7 and browser.getVersion == 8 %}{% else %}v2{% endif %} {% if browser.getBrowser == 'msie' and browser.getVersion == 7 %}ie ie7 ltie8 ltie9{% endif %} {% if browser.getBrowser == 'msie' and browser.getVersion == 8 %}ie ie8 ltie9{% endif %}'>
 <head>
@@ -44,7 +45,22 @@
 
   {% set has_feature_column = singular %} {# seems to be what 'singular' actually means #}
   {% if has_feature_column %}
-    {% set bg_url =
+    {% if page.header.feature.source and page.media[page.header.feature.source] %}
+      {% set bg_image = page.media[page.header.feature.source] %}
+    {% elseif page.media.images is not empty %}
+      {% set bg_image = page.media.images|first %}
+    {% elseif theme_config.fallback_image %}
+      {% set bg_fallback = theme_config.fallback_image|first %}
+      {% set bg_image = media["user://images/#{bg_fallback['name']}"] %}
+    {% elseif site.global_featured_image and media["theme://images/#{site.global_featured_image}"] %} {# we'll actually support and deprecate this to make migrations smoother #}
+      {{ debug('site.global_featured_image is deprecated since 2.3.0, please use fallback_image in receptarr.yaml') }}
+      {% set bg_image = media["theme://images/#{site.global_featured_image}"] %}
+    {% else %}
+      {% set bg_image = media["theme://images/#{default_feature_filename}"] %}
+    {% endif %}
+
+    {% if bg_image %}
+    {# {% set bg_url =
       page.header.feature.source
         ? page.media[page.header.feature.source].url
         : (
@@ -52,12 +68,15 @@
             ? (page.media.images|first).url
             : "#{theme_url}/images/#{ theme_config.fallback_image}"
             )
-      %}
-    {% style with {'id': 'receptar-stylesheet-inline-css'} %}
-      .entry-media{
-        background-image: url('{{ bg_url|raw }}');
-      }
-    {% endstyle %}
+      %} #}
+      {% style with {'id': 'receptar-stylesheet-inline-css'} %}
+        .entry-media{
+          background-image: url('{{ bg_image.url|raw }}');
+        }
+      {% endstyle %}
+    {% else %}
+      {{ debug('partials/base template: No valid feature image found and no valid fallback or theme default!') }}
+    {% endif %}
   {% endif %}
 
   {% block assets deferred %}

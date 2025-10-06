@@ -2,6 +2,3 @@ enabled: true
 showchildpages:
   enabled: false
 
-# replaces Receptar's global_featured_image in site.yaml
-# Image must be uploaded to your theme /images/ directory.
-fallback_image: featured.jpg
