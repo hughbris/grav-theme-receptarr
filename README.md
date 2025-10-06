@@ -311,12 +311,22 @@ Your site's _favicon_ is a small, square image that was originally intended to s
 
 Favicons should be both square and small. Usually 256x256 pixels is enough.
 
-Receptarr comes bundled with a default favicon image which you should change for your site. The setting is stored in the theme's configuration YAML file:
+Receptarr comes bundled with a default favicon image, but you should set one for your site.
+
+It's easiest to set the favicon through Grav's Admin under the Receptarr theme settings.
+
+If you change the setting manually, you'll want to save it in your copy of the theme's configuration YAML file:
 
 ```yaml
-favicon_image: MY_FAVICON.png
+favicon_image:
+  user/images/MY_FAVICON.png:
+    name: MY_FAVICON.png
+    type: image/png
 ```
 
-You only need to specify the filename, but the image _must be placed_ in the theme's `images` folder.
+* the favicon image _must be placed_ in your site's `images` folder (`user/images`), _and_
+* the format must mimic the unfortunately duplicative file upload field structure, though only the `name` and `type` properties are absolutely required.
 
-You can also change this setting through Grav's Admin under the Receptarr theme settings.
+> If you are using a child theme that inherits from Receptarr, you could also change the site's favicon easily by placing your icon file in the child theme's `images` directory with the name `favicon.png`.
+
+
