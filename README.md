@@ -292,12 +292,25 @@ feature:
 ```
 The file _must be in the page folder_ with the page (i.e. _page media_). You only need to provide the file name.
 
-**If you don't specify a feature image**, Receptarr will try to use the first image in the page folder. **If that isn't present**, Receptarr comes bundled with a global fallback image which it will use. You can change that fallback in either Grav Admin in the theme settings, or by editing your copy of Receptarr's theme configuration file by hand.
+**If you don't specify a feature image**, Receptarr will try to use the first image in the page folder.
+
+**If that isn't present**, you can specify a default image to use throughout your site. You can change that either in Grav Admin in the theme settings, or by editing your copy of Receptarr's theme configuration file by hand.
+
+If you edit this manually:
+
+* the image _must be placed_ in your site's `images` folder (`user/images`), _and_
+* the format must mimic the unfortunately duplicative file upload field structure, though only the `name` and `type` properties are absolutely required.
 
 ```yaml
-fallback_image: MY_FALLBACK.jpg
+fallback_image:
+  user/images/MY_DEFAULT.jpg:
+    name: MY_DEFAULT.jpg
+    type: image/jpeg # example only, may vary
 ```
-Again you only need to specify the filename, but the image _must be placed_ in the theme's `images` folder.
+
+**If you don't specify a default feature image** for your site, Receptarr comes bundled with a global fallback image which it will use. This is in the theme's `images` directory and could even be overridden by a child theme.
+
+> Receptar's `global_featured_image` in the site config file is even supported to assist with migrations, but will be dropped in future. You should move your setting.
 
 ### Blog post pages
 
