@@ -29,15 +29,6 @@ form:
           0: PLUGIN_ADMIN.DISABLED
         validate:
           type: bool
-    fallback_image:
-        type: filepicker
-        folder: 'theme://images'
-        label: ADMIN.FEATURES.FALLBACK.LABEL
-        help: ADMIN.FEATURES.FALLBACK.HELP
-        preview_images: true
-        accept:
-            - .png
-            - .jpg
 
     images:
       type: section
@@ -70,3 +61,28 @@ form:
                   content: ADMIN.FAVICON.DEFAULT_MESSAGE
                   markdown: true
 
+        fallback_cols:
+          type: columns
+          fields:
+            fallback_field:
+              type: column
+              fields:
+                fallback_image:
+                  type: file
+                  destination: 'user://images'
+                  label: ADMIN.FEATURES.FALLBACK.LABEL
+                  help: ADMIN.FEATURES.FALLBACK.HELP
+                  multiple: false
+                  accept:
+                    # - .webm ??
+                    - .png
+                    - .jpg
+
+            fallback_default:
+              type: column
+              fields:
+                fallback_image_preview:
+                  type: display
+                  label: false
+                  content: ADMIN.FEATURES.IMAGE.DEFAULT_MESSAGE
+                  markdown: true

@@ -13,6 +13,7 @@ en:
       IMAGE:
         LABEL: Feature or main image
         HELP: An image that will feature alongside the page or in a preview panel. If you don't specify an image, the first image in the page will be used. If there is no image, a global fallback specified in your theme configuration will be used.
+        DEFAULT_MESSAGE: "⬇️ This image will be used if you don't specify another here:\n\n![default feature image](theme://images/featured.jpg?lightbox=480,640&cropResize=75,100)"
       FALLBACK:
         LABEL: Default (fallback) image
         HELP: This fills the void on pages where no feature image is specified or available.
