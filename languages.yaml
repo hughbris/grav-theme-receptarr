@@ -8,6 +8,8 @@ en:
     INGREDIENTS: Ingredients
     INGREDIENTS_TITLE: Heading
     COLUMN_TITLE: Column heading
+    NAVBAR:
+      CHILD_PAGES: Show child pages in navbar
     SPECIAL_IMAGES: Special images
     FEATURES:
       IMAGE:

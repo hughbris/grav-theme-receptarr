@@ -21,7 +21,7 @@ form:
   fields:
     showchildpages.enabled:
         type: toggle
-        label: Show child pages in navbar
+        label: ADMIN.NAVBAR.CHILD_PAGES
         highlight: 1
         default: 1
         options:
