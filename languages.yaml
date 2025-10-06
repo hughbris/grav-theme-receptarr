@@ -8,6 +8,7 @@ en:
     INGREDIENTS: Ingredients
     INGREDIENTS_TITLE: Heading
     COLUMN_TITLE: Column heading
+    SPECIAL_IMAGES: Special images
     FEATURES:
       IMAGE:
         LABEL: Feature or main image
@@ -18,6 +19,7 @@ en:
     FAVICON:
       LABEL: Site icon
       HELP: Known as the 'favicon', this image appears in the browser tab, bookmark lists, sometimes in search engine display, and in other contexts. It's very important. The image should be small and square, no larger than 512x512 pixels.
+      DEFAULT_MESSAGE: "⬇️ This icon will be used if you don't upload one here:\n\n![default favicon](theme://images/favicon.png?forceResize=64,64)"
   SUBSCRIBE: Subscribe
   TWEET: Tweet
   SHARE: Share

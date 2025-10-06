@@ -38,12 +38,35 @@ form:
         accept:
             - .png
             - .jpg
-    favicon_image:
-        type: filepicker
-        folder: 'theme://images'
-        label: ADMIN.FAVICON.LABEL
-        help: ADMIN.FAVICON.HELP
-        preview_images: true
-        accept:
-            - .png
-            - .jpg
+
+    images:
+      type: section
+      title: ADMIN.SPECIAL_IMAGES
+      fields:
+
+        favicon_cols:
+          type: columns
+          fields:
+            favicon_field:
+              type: column
+              fields:
+                favicon_image:
+                  type: file
+                  destination: 'user://images'
+                  label: ADMIN.FAVICON.LABEL
+                  help: ADMIN.FAVICON.HELP
+                  multiple: false
+                  accept:
+                    - .png
+                    - .jpg
+                    - .ico
+
+            favicon_default:
+              type: column
+              fields:
+                favicon_image_preview:
+                  type: display
+                  label: false
+                  content: ADMIN.FAVICON.DEFAULT_MESSAGE
+                  markdown: true
+
