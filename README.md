@@ -2,7 +2,7 @@
 
 ![Receptarr](assets/readme_1.png)
 
-Receptarr is an adpatation of a self-described simple, modern, responsive, high-DPI, fully customizable, stylish blog Grav theme by [WebMan Design](http://themedemos.webmandesign.eu/).
+Receptarr is an adaptation of a self-described simple, modern, responsive, high-DPI, fully customizable, stylish blog Grav theme by [WebMan Design](http://themedemos.webmandesign.eu/).
 
 It features split-screen book-like design inspired by a ~~modern~~ cook book with emphasis on beautiful imagery and typography.
 
@@ -34,7 +34,7 @@ Installing the Receptarr theme can be done in a few ways:
 
 ## GPM direct install options
 
-The Grav Package Manager's [`direct-install` command](#command-line-interface-cli), or its [_Direct Install_ front end](#in-the-grav-admin-front-end) in Grav Admin, provide quite a simple way to install an unlisted theme.
+The Grav Package Manager's [`direct-install` command](#command-line-interface-cli), or its [_Direct install_ front end](#in-the-grav-admin-front-end) in Grav Admin, provide quite a simple way to install an unlisted theme.
 
   > Using the direct install options for unofficial plugins and themes **will throw a security error** _unless_ you allow installing from unofficial sources in your Grav system settings. The error on the command line interface will look something like this:
   >
@@ -81,9 +81,9 @@ If these are true:
 
 Again there are two options and they mirror the two variations of the [command line version](#command-line-interface-cli) outlined above.
 
-Once logged in, [navigate to the _Tools_ menu and then find the _Direct Install_ tab](https://learn.getgrav.org/17/admin-panel/tools).
+Once logged in, [navigate to the _Tools_ menu and then find the _Direct install_ tab](https://learn.getgrav.org/17/admin-panel/tools).
 
-![Grav Admin UI showing Direct Install options](receptarr-admin-install.png)
+![Grav Admin UI showing 'Direct install' options](receptarr-admin-install.png)
 
 The first option, "**Install Package via Direct ZIP Upload**", provides a front end to [Variation B](#variation-b-download-first). Here too, you just need a zip file which you can download from the same places. Then use the _Browse_ button to find and select it, and then hit the _Upload and install_ button.
 
@@ -206,7 +206,7 @@ In Receptarr, you have few unique features which you can configure easily:
 
 ### Translations
 
-Take a look at theme's **language.yaml**. Polish and English versions contains all variables which you can translate to your language.
+Take a look at theme's **language.yaml**. The English version contains all variables which you can translate to your language.
 
 ### Adding recipes to blog page
 
