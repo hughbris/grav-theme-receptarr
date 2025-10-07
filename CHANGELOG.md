@@ -1,3 +1,18 @@
+# v2.3.0
+## 07-10-2025
+
+1. [](#improved)
+    * fallback featured image property renamed and moved to theme config (313ac15)
+    * README section on featured images and fallback (cf522b1)
+    * use custom Twig `link` tag for site favicon (36e8732)
+1. [](#new)
+    * default page blueprint including featured image (2833aa3); fallback image in theme blueprint (05cb358)
+    * primary_classes block in body block's #primary div (5f9ebbf)
+    * added `favicon_image` theme setting (324d427) and blueprint (5ea8512)
+    * README section on favicon images (fb29b98)
+1. [](#bugfix)
+    * add missing omitted bootstrap and google font styles (4e23f8c)
+
 # v2.2.0
 ## 04-10-2025
 
