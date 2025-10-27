@@ -30,20 +30,22 @@ Installing the Receptarr theme can be done in a few ways:
   * with [`git clone`](#clone-with-git);
 * [using `.dependencies`](#install-using-dependencies).
 
-> Note that the Receptarr theme is not currently included in the official Grav theme repository, so the standard GPM `install` command _by theme name_ won't work.
+> [!IMPORTANT]
+> The Receptarr theme is not currently included in the official Grav theme repository, so the standard GPM `install` command _by theme name_ won't work.
 
 ## GPM direct install options
 
 The Grav Package Manager's [`direct-install` command](#command-line-interface-cli), or its [_Direct install_ front end](#in-the-grav-admin-front-end) in Grav Admin, provide quite a simple way to install an unlisted theme.
 
-  > Using the direct install options for unofficial plugins and themes **will throw a security error** _unless_ you allow installing from unofficial sources in your Grav system settings. The error on the command line interface will look something like this:
-  >
-  ```
-  Preparing to install https://github.com/hughbris/grav-theme-receptarr/archive/refs/heads/develop.zip
-    |- Downloading package...     0%
-    `- ERROR: Only official GPM URLs are allowed. You can modify this behavior in the System configuration.
-  ```
-  > The setting to modify is [`gpm.official_gpm_only` in `user/config/system.yaml`](https://learn.getgrav.org/17/basics/grav-configuration#gpm). You can also [modify the "_Official GPM Only_" setting from Grav's Admin web interface](https://learn.getgrav.org/17/admin-panel/dashboard/configuration-system#advanced) if you have system administrator permissions. **Note that this is a security setting you may want to re-enable after installing this theme.**
+> [!IMPORTANT]
+> Using the direct install options for unofficial plugins and themes **will throw a security error** _unless_ you allow installing from unofficial sources in your Grav system settings. The error on the command line interface will look something like this:
+>
+```
+Preparing to install https://github.com/hughbris/grav-theme-receptarr/archive/refs/heads/develop.zip
+  |- Downloading package...     0%
+  `- ERROR: Only official GPM URLs are allowed. You can modify this behavior in the System configuration.
+```
+> The setting to modify is [`gpm.official_gpm_only` in `user/config/system.yaml`](https://learn.getgrav.org/17/basics/grav-configuration#gpm). You can also [modify the "_Official GPM Only_" setting from Grav's Admin web interface](https://learn.getgrav.org/17/admin-panel/dashboard/configuration-system#advanced) if you have system administrator permissions. **Note that this is a security setting you may want to re-enable after installing this theme.**
 
 ### Command line interface (CLI)
 
@@ -67,6 +69,7 @@ Then in your terminal, at the root of yor Grav install, you can issue the comman
 
 Both variations will install the `develop` branch of Receptarr theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/receptarr`.
 
+> [!TIP]
 > If you want to install a tag release or other branch, replace the URL filename prefix with the tag or branch name, e.g. _https://github.com/hughbris/grav-theme-receptarr/archive/refs/heads/2.1.0.zip_. You can browse "releases" at https://github.com/hughbris/grav-theme-receptarr/releases. _Choose the zip file URL because it seems the tarball format is not supported by `direct-install`._
 
 ### In the Grav Admin front end
@@ -89,6 +92,7 @@ The first option, "**Install Package via Direct ZIP Upload**", provides a front 
 
 The last option, "**Install Package via Remote URL Reference**" is just like [Variation A](#variation-a-by-url) above. You only need to select a URL in the same places and paste it into the text box here. Then hit the _Install_ button.
 
+> [!TIP]
 > Grav's official online manual [explains this in more detail](https://learn.getgrav.org/17/admin-panel/tools) if you need it.
 
 ## Manual Installation
@@ -117,6 +121,7 @@ You might find it easiest to **install via git**. If you are in a command line (
 git clone https://github.com/hughbris/grav-theme-receptarr.git receptarr
 ```
 
+> [!TIP]
 > Check out a specific branch or tag using the `-b` argument, e.g. `git clone -b 2.1.0 https://github.com/hughbris/grav-theme-receptarr.git receptarr`.
 
 ## Install using `.dependencies`
@@ -177,6 +182,7 @@ That's it! _(\*as long as this runs smoothly)_
 
 If you installed [using the `.dependencies` file](#install-using-dependencies), you can simply run through that process again. Grav's installer will check for updates in this process. **Note that all plugins and themes in this file will be updated if available**, which you may not necessarily want. If you want to only update Receptarr and not touch any other dependencies, follow the [manual update process outlined](#manual-update) here below.
 
+> [!NOTE]
 > `bin/grav install` won't uninstall any plugins or themes that your remove from your dependencies file.
 
 ## Manual Update
@@ -186,7 +192,8 @@ Manually updating Receptarr is pretty simple. Here is what you will need to do t
 * Delete the `your/site/user/themes/receptarr` directory.
 * Follow any [installation process](#installation) outlined above.
 
-> Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
+> [!WARNING]
+> Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
 
 # Setup
 
@@ -310,6 +317,7 @@ fallback_image:
 
 **If you don't specify a default feature image** for your site, Receptarr comes bundled with a global fallback image which it will use. This is in the theme's `images` directory and could even be overridden by a child theme.
 
+> [!NOTE]
 > Receptar's `global_featured_image` in the site config file is even supported to assist with migrations, but will be dropped in future. You should move your setting.
 
 ### Blog post pages
@@ -340,6 +348,7 @@ favicon_image:
 * the favicon image _must be placed_ in your site's `images` folder (`user/images`), _and_
 * the format must mimic the unfortunately duplicative file upload field structure, though only the `name` and `type` properties are absolutely required.
 
+> [!TIP]
 > If you are using a child theme that inherits from Receptarr, you could also change the site's favicon easily by placing your icon file in the child theme's `images` directory with the name `favicon.png`.
 
 
