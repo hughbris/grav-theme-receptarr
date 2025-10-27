@@ -126,7 +126,7 @@ git clone https://github.com/hughbris/grav-theme-receptarr.git receptarr
 
 ## Install using `.dependencies`
 
-Grav's command line interface `install` command will consult a YAML manifest of themes and plugins to install. You'll find Grav's default dependencies in a file called `.dependencies` in Grav's root directory. You can edit this to add more plugins and themes. This provides a few advantages:
+Grav's command line interface `install` command will consult a YAML manifest of themes and plugins to install. You'll find Grav's default dependencies in a file called `.dependencies` in Grav's `user` directory. You can edit this to add more plugins and themes. This provides a few advantages:
 
 * you can easily reconstruct your site's dependencies on a new install;
 * it's possible to install plugins and themes from any git URL, they don't need to be in the official repositories;
