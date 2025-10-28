@@ -86,3 +86,85 @@ form:
                   label: false
                   content: ADMIN.FEATURES.IMAGE.DEFAULT_MESSAGE
                   markdown: true
+
+    styles_section:
+      type: section
+      title: ADMIN.STYLES.LABEL
+      fields:
+        styles_cols:
+          type: columns
+          fields:
+
+            styles_col1:
+              type: column
+              fields:
+                styles.site.accent.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.ACCENT_COLOR
+                styles.site.contrast.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.CONTRAST_TEXT
+                styles.site.border.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.BORDER_COLOR
+                styles.site.interactive.shade:
+                  type: range
+                  label: ADMIN.STYLES.INTERACTIVE_SHADE
+                  validate:
+                    min: 0
+                    max: 1
+                    step: 0.1
+                styles.header.shade:
+                  type: range
+                  label: ADMIN.STYLES.HEADER_SHADE
+                  validate:
+                    min: 0
+                    max: 1
+                    step: 0.1
+                styles.flyout.foreground.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.FLYOUT_TEXT
+                styles.flyout.background.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.FLYOUT_BACKGROUND
+                styles.flyout.border.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.FLYOUT_BORDER
+                styles.menu.highlight.background.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.MENU_HIGHLIGHT_BACKGROUND
+
+            styles_col2:
+              type: column
+              fields:
+                styles.content.foreground.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.CONTENT_TEXT
+                styles.content.background.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.CONTENT_BACKGROUND
+                styles.headings.foreground.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.HEADINGS_TEXT
+                styles.posts.background.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.POSTS_BACKGROUND
+                styles.post.meta.background.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.POST_META_BACKGROUND
+                styles.gallery.captions.foreground.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.GALLERY_CAPTIONS_TEXT
+                styles.gallery.captions.shade:
+                  type: range
+                  label: ADMIN.STYLES.GALLERY_CAPTIONS_SHADE
+                  validate:
+                    min: 0
+                    max: 1
+                    step: 0.1
+                styles.footer.foreground.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.FOOTER_TEXT
+                styles.footer.background.color:
+                  type: colorpicker
+                  label: ADMIN.STYLES.FOOTER_BACKGROUND

@@ -20,6 +20,9 @@
   {% endblock %}
 
   {% block stylesheets %}
+    {% style %}
+      {{ include('css/variables.css.twig') }}
+    {% endstyle %}
     {% style 'theme://css/slick.css' %}
     {% style 'theme://genericons/genericons.css' %}
     {% style 'theme://css/starter.css' %}

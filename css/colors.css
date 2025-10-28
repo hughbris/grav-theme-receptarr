@@ -30,40 +30,60 @@
 			tbody tr:hover td,
 			tbody tr:hover th,
 			.pagination a:hover,
-			.site .wp-playlist { background-color: rgba(0,0,0, .1); } /* * */
+			.site .wp-playlist {
+				background-color: var(--bg-interactive);
+			}
 
-			.site-header { background-color: rgba(0,0,0, .2); }
+			.site-header {
+				background-color: var(--bg-header);
+			}
 
-			.gallery-caption { background-color: rgba(0,0,0, .8); } /* * */
+			.gallery-caption {
+				background-color: var(--bg-gallery-caption);
+			}
 
 		/* Basic background colors */
 
 			.site,
 			.hamburger-item,
 			.home .content-area,
-			.posts .hentry { background-color: #fff; }
+			.posts .hentry {
+				background-color: var(--bg-content);
+			}
 
 			body,
-			.site-footer { background-color: #f5f7f9; }
+			.site-footer {
+				background-color: var(--bg-footer);
+			}
 
 			hr,
 			code,
 			pre,
-			.entry-meta-bottom { background-color: #eaecee; }
+			.entry-meta-bottom {
+				background-color: var(--bg-post-meta);
+			}
 
 			.main-navigation a:hover,
-			.current-menu-item > a { background-color: #3a3c3e; }
+			.current-menu-item > a {
+				background-color: var(--bg-menu-highlight);
+			}
 
 			.not-scrolled.is-posts-list .site-header,
 			.not-scrolled.paged .site-header,
 			.pagination,
 			.posts,
 			.comments-area-wrapper,
-			.posts .entry-inner:after { background-color: #2a2c2e; }
+			.posts .entry-inner:after {
+				background-color: var(--bg-posts);
+			}
 
-				.widget .tagcloud a:before { background-color: #2a2c2e; } /* * */
+			.widget .tagcloud a:before {
+				background-color: var(--bg-posts);
+			}
 
-			.secondary { background-color: #1a1c1e; }
+			.secondary {
+				background-color: var(--bg-flyout);
+			}
 
 		/* Accent background color */
 
@@ -85,7 +105,9 @@
 			.widget_calendar tbody a,
 			.widget .tagcloud a:hover,
 			body #infinite-handle span,
-			.site-content div.sharedaddy .sd-content ul li a.sd-button:not(.no-text) { background-color: #e53739; }
+			.site-content div.sharedaddy .sd-content ul li a.sd-button:not(.no-text) {
+				background-color: var(--accent);
+			}
 
 
 
@@ -125,15 +147,15 @@
 			mark,
 			ins,
 			.highlight {
-				-webkit-box-shadow: .38em 0 0 #e53739, -.38em 0 0 #e53739;
-				        box-shadow: .38em 0 0 #e53739, -.38em 0 0 #e53739;
+				-webkit-box-shadow: .38em 0 0 var(--accent), -.38em 0 0 var(--accent);
+				        box-shadow: .38em 0 0 var(--accent), -.38em 0 0 var(--accent);
 			}
 
 		/* !important overrides */
 
 			/* Accent background color */
 
-				.infinite-loader .spinner > div > div { background: #e53739 !important; }
+				.infinite-loader .spinner > div > div { background: var(--accent) !important; }
 
 
 
@@ -161,9 +183,11 @@
 		.widget_calendar tbody a,
 		.widget .tagcloud a:hover,
 		body #infinite-handle span,
-		.site-header { color: #fff; }
+		.site-header {
+			color: var(--contrast);
+		}
 
-			.site-content div.sharedaddy .sd-content ul li a.sd-button:not(.no-text) { color: #fff !important; }
+			.site-content div.sharedaddy .sd-content ul li a.sd-button:not(.no-text) { color: var(--contrast) !important; }
 
 		.secondary-controls,
 		.secondary h1,
@@ -178,35 +202,49 @@
 		.comments-area-wrapper h4,
 		.comments-area-wrapper h5,
 		.comments-area-wrapper h6,
-		.current-menu-item > a { color: #fff; }
+		.current-menu-item > a {
+			color: var(--contrast);
+		}
 
 		.gallery-caption,
-		.widget .tagcloud a:before { color: #caccce; }
+		.widget .tagcloud a:before {
+			color: var(--fg-gallery-caption);
+		}
 
 		.secondary,
 		.pagination,
-		.comments-area-wrapper,
-		.site-footer { color: #9a9c9e; }
+		.comments-area-wrapper {
+			color: var(--fg-flyout);
+		}
+		.site-footer {
+			color: var(--fg-footer);
+		}
 
 		body,
-		code { color: #6a6c6e; }
+		code {
+			color: var(--fg-content);
+		}
 
 		h1, h2, h3, h4, h5, h6,
-		.h1, .h2, .h3, .h4, .h5, .h6 { color: #1a1c1e; }
+		.h1, .h2, .h3, .h4, .h5, .h6 {
+			color: var(--fg-headings);
+		}
 
 	/* Accent text color */
 
 		a,
-		.accent-color { color: #e53739; }
+		.accent-color {
+			color: var(--accent);
+		}
 
 	/* Form fields placeholder text color */
 
-		         ::-webkit-input-placeholder { color: inherit; }            /* * */
-		              :-ms-input-placeholder { color: inherit !important; } /* * */
-		                  ::-moz-placeholder { color: inherit; }            /* * */
-		:disabled::-webkit-input-placeholder { color: inherit; }            /* * */
-		     :disabled:-ms-input-placeholder { color: inherit !important; } /* * */
-		         :disabled::-moz-placeholder { color: inherit; }            /* * */
+		         ::-webkit-input-placeholder { color: inherit; }
+		              :-ms-input-placeholder { color: inherit !important; }
+		                  ::-moz-placeholder { color: inherit; }
+		:disabled::-webkit-input-placeholder { color: inherit; }
+		     :disabled:-ms-input-placeholder { color: inherit !important; }
+		         :disabled::-moz-placeholder { color: inherit; }
 
 
 
@@ -216,11 +254,15 @@
 
 	/* Basic border color */
 
-		.site-content { border-color: #eaecee; }
+		.site-content {
+			border-color: var(--border);
+		}
 
 		.secondary,
 		.site-content .pagination,
-		.site-content .comments-area-wrapper { border-color: #3a3c3e; }
+		.site-content .comments-area-wrapper {
+			border-color: var(--border-flyout);
+		}
 
 	/* Accent border color */
 
@@ -228,7 +270,9 @@
 		select:focus,
 		textarea:focus,
 		.post-navigation .post-title,
-		.widget .tagcloud a:hover { border-color: #e53739; }
+		.widget .tagcloud a:hover {
+			border-color: var(--accent);
+		}
 
 	/* Inherit border color */
 
@@ -257,23 +301,24 @@
 		.secondary *,
 		.main-navigation li,
 		.site-content *,
-		.fl-builder-content { border-color: inherit; } /* * */
+		.fl-builder-content { border-color: inherit; }
 
 
 
 /**
  * Text selections
  */
-
+/* maybe just let the browser do this */
+/*
 	::selection {
-		background: #fafcbe; /* * */
-		color: #6a6c2e;      /* * */
+		background: #fafcbe;
+		color: #6a6c2e;
 	}
 	::-moz-selection {
-		background: #fafcbe; /* * */
-		color: #6a6c2e;      /* * */
+		background: #fafcbe;
+		color: #6a6c2e;
 	}
-
+*/
 
 
 /**
@@ -282,7 +327,9 @@
 
 	@media only screen and (max-width: 960px) {
 
-		.site-header { background-color: #2a2c2e; }
+		.site-header {
+			background-color: var(--bg-posts);
+		}
 
 	} /* /(max-width: 960px) */
 

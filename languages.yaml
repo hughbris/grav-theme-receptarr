@@ -23,6 +23,27 @@ en:
       LABEL: Site icon
       HELP: Known as the 'favicon', this image appears in the browser tab, bookmark lists, sometimes in search engine display, and in other contexts. It's very important. The image should be small and square, no larger than 512x512 pixels.
       DEFAULT_MESSAGE: "⬇️ This icon will be used if you don't upload one here:\n\n![default favicon](theme://images/favicon.png?forceResize=64,64)"
+    STYLES:
+      LABEL: Styles
+      CONTENT_BACKGROUND: Content background colour
+      ACCENT_COLOR: Site accent colour
+      HEADER_SHADE: Site header shade
+      INTERACTIVE_SHADE: Interactive elements shade
+      GALLERY_CAPTIONS_TEXT: Gallery captions text colour
+      GALLERY_CAPTIONS_SHADE: Gallery captions shade
+      FOOTER_BACKGROUND: Footer background colour
+      POST_META_BACKGROUND: Post metadata background colour
+      MENU_HIGHLIGHT_BACKGROUND: Menu highlight background colour
+      POSTS_BACKGROUND: Posts listing background colour
+      FLYOUT_BACKGROUND: Flyout burger menu background colour
+      CONTRAST_TEXT: Site contrast text colour
+      FLYOUT_TEXT: Flyout burger menu text colour
+      FOOTER_TEXT: Footer text colour
+      CONTENT_TEXT: Content text colour
+      HEADINGS_TEXT: Headings text colour
+      BORDER_COLOR: Site border colour
+      FLYOUT_BORDER: Flyout burger menu border colour
+
   SUBSCRIBE: Subscribe
   TWEET: Tweet
   SHARE: Share
@@ -38,6 +59,25 @@ en:
   NEXT: Next
   PREVIOUS: Previous
   TOPICS: topics
+
+en-US: # fûck yeah
+  ADMIN:
+    STYLES:
+      CONTENT_BACKGROUND: Content background color
+      ACCENT_COLOR: Site accent color
+      FOOTER_BACKGROUND: Footer background color
+      POST_META_BACKGROUND: Post metadata background color
+      MENU_HIGHLIGHT_BACKGROUND: Menu highlight background color
+      POSTS_BACKGROUND: Posts listing background color
+      FLYOUT_BACKGROUND: Flyout burger menu background color
+      CONTRAST_TEXT: Site contrast text color
+      GALLERY_CAPTIONS_TEXT: Gallery captions text color
+      FLYOUT_TEXT: Flyout burger menu text color
+      FOOTER_TEXT: Footer text color
+      CONTENT_TEXT: Content text color
+      HEADINGS_TEXT: Headings text color
+      BORDER_COLOR: Site border color
+      FLYOUT_BORDER: Flyout burger menu border color
 
 el:
   SUBSCRIBE: Εγγραφή

@@ -1,0 +1,35 @@
+{% set styleopts = theme_var('styles') %}
+{% set inherited_styleopts = config.themes.receptarr.styles %}
+
+{% macro activeValue(deep, context) %}
+{% spaceless %}
+  {% set val = context.styleopts %}
+  {% set def = context.inherited_styleopts %}
+  {% for prop in regex_split(deep, '/\\./') %}
+    {% set val = val[prop] %}
+    {% set def = def[prop] %}
+  {% endfor %}
+  {{ val|default(def) }}
+{% endspaceless %}
+{% endmacro %}
+
+:root {
+  --bg-interactive: rgba(0,0,0, {{ _self.activeValue('site.interactive.shade', _context) }});
+  --bg-header: rgba(0,0,0, {{ _self.activeValue('header.shade', _context) }});
+  --bg-gallery-caption: rgba(0,0,0, {{ _self.activeValue('gallery.captions.shade', _context) }});
+  --bg-content: {{ _self.activeValue('content.background.color', _context) }};
+  --bg-footer: {{ _self.activeValue('footer.background.color', _context) }};
+  --bg-post-meta: {{ _self.activeValue('post.meta.background.color', _context) }};
+  --bg-menu-highlight: {{ _self.activeValue('menu.highlight.background.color', _context) }};
+  --bg-posts: {{ _self.activeValue('posts.background.color', _context) }};
+  --bg-flyout: {{ _self.activeValue('flyout.background.color', _context) }};
+  --accent: {{ _self.activeValue('site.accent.color', _context) }};
+  --contrast: {{ _self.activeValue('site.contrast.color', _context) }};
+  --fg-gallery-caption: {{ _self.activeValue('gallery.captions.foreground.color', _context) }};
+  --fg-flyout: {{ _self.activeValue('flyout.foreground.color', _context) }};
+  --fg-footer: {{ _self.activeValue('footer.foreground.color', _context) }};
+  --fg-content: {{ _self.activeValue('content.foreground.color', _context) }};
+  --fg-headings: {{ _self.activeValue('headings.foreground.color', _context) }};
+  --border: {{ _self.activeValue('site.border.color', _context) }};
+  --border-flyout: {{ _self.activeValue('flyout.border.color', _context) }};
+}

@@ -211,6 +211,25 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 
 In Receptarr, you have few unique features which you can configure easily:
 
+### Theme colours
+
+You can modify the theme's colours in either the theme configuration YAML file or in the Admin plugin web front end. Defaults are provided and sourced from the source Receptar theme.
+
+Examples:
+
+```yaml
+styles:
+  header:
+    shade: 0.2
+  content:
+    background:
+      color: '#fff'
+    foreground:
+      color: '#6a6c6e'
+```
+
+![Screenshot of Receptarr Admin UI colour theme selectors](receptarr-admin-colours.png)
+
 ### Translations
 
 Take a look at theme's **language.yaml**. The English version contains all variables which you can translate to your language.
