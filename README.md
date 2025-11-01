@@ -211,9 +211,9 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 
 In Receptarr, you have few unique features which you can configure easily:
 
-### Theme colours
+### Theme colours and shades
 
-You can modify the theme's colours in either the theme configuration YAML file or in the Admin plugin web front end. Defaults are provided and sourced from the source Receptar theme.
+You can modify the theme's colours and shading/opacity in either the theme configuration YAML file or in the Admin plugin web front end. Defaults are provided and sourced from the source Receptar theme.
 
 Examples:
 
