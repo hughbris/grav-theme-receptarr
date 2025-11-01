@@ -188,6 +188,7 @@
 		}
 
 			.site-content div.sharedaddy .sd-content ul li a.sd-button:not(.no-text) { color: var(--contrast) !important; }
+			/* FIXME: kill this along with sharedaddy */
 
 		.secondary-controls,
 		.secondary h1,
