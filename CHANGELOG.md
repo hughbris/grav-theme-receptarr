@@ -1,3 +1,11 @@
+# v2.4.0
+## 08-12-2025
+
+1. [](#improved)
+    * move to theme color variables (#3; 217fa49)
+    * add generic template-* body classes (#4, ad8de1a)
+    * README tweaks
+
 # v2.3.0
 ## 07-10-2025
 
