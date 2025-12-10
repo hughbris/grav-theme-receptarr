@@ -58,8 +58,8 @@ form:
                 favicon_image_preview:
                   type: display
                   label: false
-                  content: ADMIN.FAVICON.DEFAULT_MESSAGE
-                  markdown: true
+                  evaluate: true
+                  content: "{{ ('⬇️ ' ~ 'ADMIN.FAVICON.DEFAULT_MESSAGE'|t ~ ':\n')|markdown }}{{ media['theme://images/favicon.png'].forceResize(64,64).html(null, 'default favicon')|raw }}"
 
         fallback_cols:
           type: columns
@@ -84,8 +84,8 @@ form:
                 fallback_image_preview:
                   type: display
                   label: false
-                  content: ADMIN.FEATURES.IMAGE.DEFAULT_MESSAGE
-                  markdown: true
+                  evaluate: true
+                  content: "{{ ('⬇️ ' ~ 'ADMIN.FEATURES.IMAGE.DEFAULT_MESSAGE'|t ~ ':\n')|markdown }}{{ media['theme://images/featured.jpg'].lightbox(480,640).cropResize(75,100).html(null, 'default feature image')|raw }}"
 
     styles_section:
       type: section
