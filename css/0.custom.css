@@ -1,0 +1,258 @@
+.site, .hamburger-item, .home .content-area, .posts .hentry {
+	background-color: #dfeaac;
+}
+
+figure.site-preview + p {
+	margin-top: 0.3rem;
+}
+
+figure.site-preview figcaption {
+	font-size: smaller;
+	letter-spacing: 0.01em;
+}
+
+.tntsearch-results .hits .full-search,
+.tntsearch-results .show-more {
+	right: 0;
+	position: fixed;
+	font-style: italic;
+	letter-spacing: 0.02em;
+}
+
+.tntsearch-results .snippet {
+	line-height: 1.3;
+	font-size: 90%;
+}
+
+.tntsearch-results em,
+.content-area .search-result .snippet em {
+	background-color: #FDFD7E;
+	color: #9632FC;
+}
+
+.content-area .search-result .snippet em {
+	font-style: normal;
+}
+
+.content-area .search-result h5.title {
+	margin-bottom: 1rem;
+}
+
+.content-area .search-result {
+	background-color: beige;
+	padding: 1rem 1rem 0.1rem;
+	margin-bottom: 1rem;
+}
+
+.site-header-widgets {
+	position: relative;
+}
+
+.site-header-widgets .form-search { /* this is the homepage with the slider - the selector doesn't seem reliable */
+	opacity: 0.5;
+}
+
+#site-header-widgets form {
+	margin-bottom: revert;
+}
+
+#site-header-widgets form.tntsearch-form .tntsearch-results {
+	background-color: #3a3c3ea5;
+	padding: 1rem;
+	max-height: 90cqh;
+	overflow-y: auto;
+	position: absolute;
+	text-align: start;
+}
+
+#site-header-widgets form.tntsearch-form .tntsearch-results .full-search {
+	position: revert;
+	margin-left: 1rem;
+}
+
+#site-header-widgets form.tntsearch-form .tntsearch-results .search-result {
+	background-color: #3a3c3ed0;
+	padding: 0.3rem 0.3rem 0;
+}
+
+#site-header-widgets form.tntsearch-form .tntsearch-results h5.title {
+	color: beige;
+}
+
+.entry-date {
+	cursor: default;
+}
+
+.entry-category .tags-links::before {
+	content: '\f302';
+}
+
+.entry-category .tags-links {
+	font-size: 0.81em; /*  as it is in the post header in original theme */
+}
+
+.entry-category {
+	white-space: normal;
+	position: inherit;
+}
+
+.entry-meta-element [rel=tag] {
+	white-space: nowrap;
+}
+
+.entry-header {
+	padding-top: 0;
+}
+
+.home #primary.filtered.content-area,
+.blog #primary.filtered.content-area {
+	margin-top: 6rem;
+}
+
+.filtered h1 .tag {
+	padding: 0 0.3rem;
+	opacity: 0.6;
+	text-transform: uppercase;
+	font-size: smaller;
+	background-color: beige;
+}
+
+.intro {
+	padding: 0 19%;
+	margin-bottom: 3.62rem;
+	text-align: center;
+	font-style: italic;
+}
+
+.timeline time {
+	font-style: italic;
+}
+
+.timeline a.event {
+	font-weight: bolder;
+}
+
+.timeline .entry-meta-element {
+	opacity: 1;
+}
+
+.timeline .entry-category {
+	top: inherit;
+}
+
+.has-text .site-header { /* has-text and therefore the site-header should not be transparent because text looks ugly underlayed */
+	background-color: #b3bb8a;
+}
+
+.recipe-data .duration::before {
+	content:"\f303"; /* could be better choice */
+}
+
+.recipe-data .cuisine::before {
+	content:"\f468";
+}
+
+.recipe-data .meals::before { /* using 'meal' rather than category because the theme uses 'category' a lot */
+	content:"\f301"; /* could be better choice */
+}
+
+.recipe-data .diets::before {
+	content:"\f418"; /* could be better choice */
+}
+
+.recipe-data .label {
+	font-weight: normal; /*  for strong */
+	font-style: normal; /* for em */
+	text-decoration: underline;
+}
+
+.travel-data .places::before {
+	content:"\f417"; /* could be better choice */
+}
+
+.link-data .url::before {
+	content:"\f107"; /* could be better choice */
+}
+
+.share .more-link {
+	background-color: #fff7;
+}
+
+.share.link-more { /* not confusing classnames at all! */
+	text-align: center;
+}
+
+.page-title.subtitled {
+	padding-bottom: 2rem;
+}
+
+.subtitled + .sub-title {
+	text-align: center;
+}
+
+#jp-relatedposts {
+	display: block;
+}
+
+#jp-relatedposts div.jp-relatedposts-items-visual { /* it has to be this specific! */
+	text-align: center;
+}
+
+/* TAG CLOUD PLUGIN OVERRIDES */
+#tagcloud {
+	padding: 8px;
+}
+
+#tagcloud a:link, #tagcloud a:visited {
+	color: inherit;
+}
+
+#tagcloud a:hover {
+	background-color: #3a3c3e;
+	text-decoration-line: none;
+	outline: thin solid #e53739;
+}
+
+#tagcloud span a {
+	padding: 0 4px;
+	white-space: nowrap;
+}
+
+/* ARCHIVES PLUGIN OVERRIDES */
+.widget_recent_entries li::before {
+	content: '\f307';
+}
+
+.label.pill {
+	background-color: #3a3c3e;
+	right: 0.5em;
+	position: absolute;
+	border-radius: 10px;
+	width: 2em;
+	text-align: center;
+	font-weight: bolder;
+	line-height: initial;
+	top: 0.5em;
+}
+
+.taxonomy-description {
+	padding-left: unset;
+	padding-right: unset;
+}
+
+@media only screen and (min-width: 681px) {
+	.taxonomy-description {
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.alt-content {
+		padding: 0 3rem;
+	}
+}
+
+.site-banner h1 .highlight {
+	outline: none;
+}
