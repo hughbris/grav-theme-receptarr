@@ -1,3 +1,10 @@
+# v2.4.1
+## 10-12-2025
+
+1. [](#improved)
+    * simple translation strings for `DEFAULT_MESSAGE` (c3aa899)
+    * fix line endings in some files (1723224)
+
 # v2.4.0
 ## 08-12-2025
 
