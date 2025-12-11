@@ -4,7 +4,7 @@
          <div class="site-info" role="contentinfo">
             {% block site_rights %}
             {% if site.copyright %}
-               {{ site.copyright|raw }}
+               {{ site.copyright|markdown(false) }}
             {% elseif site.author.name %}
                © {{ date|date('Y') }} {{ site.author.name }}{# | <a href="/meta">Credits</a> #}
             {% endif %}
