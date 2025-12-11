@@ -2,16 +2,16 @@ title: default
 extends@: parent@
 
 form:
-  fields:
-    tabs:
+    fields:
+        tabs:
 
-      fields:
+            fields:
 
-        content:
-          fields:
-            header.feature.source:
-              type: pagemediaselect
-              label: ADMIN.FEATURES.IMAGE.LABEL # Feature or main image
-              multiple: false
-              # ordering@: media_order # not needed yet because this field happens to be the last
-              help: ADMIN.FEATURES.IMAGE.HELP
+                content:
+                    fields:
+                        header.feature.source:
+                            type: pagemediaselect
+                            label: ADMIN.FEATURES.IMAGE.LABEL # Feature or main image
+                            multiple: false
+                            # ordering@: media_order # not needed yet because this field happens to be the last
+                            help: ADMIN.FEATURES.IMAGE.HELP
