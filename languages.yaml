@@ -181,7 +181,7 @@ pl:
     RANDOM_ARTICLE: Losowy Artykuł
     POPULAR_TAGS: Popularne Tagi
     LATEST_RECIPES: Ostatnie przepisy
-    RELATED_POSTS: Zobacz również:
+    RELATED_POSTS: 'Zobacz również:'
     SEARCH_FIELD: Zacznij pisać i wciśnij enter...
     NEXT: Następny
     PREVIOUS: Poprzedni
