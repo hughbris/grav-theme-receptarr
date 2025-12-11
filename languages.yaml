@@ -44,6 +44,8 @@ en:
             HEADINGS_TEXT: Headings text colour
             BORDER_COLOR: Site border colour
             FLYOUT_BORDER: Flyout burger menu border colour
+        DEPRECATIONS:
+            ITEM: '**_Item_ pages have been replaced by _Blog Post_ pages**. If this is a new page, please cancel and recreate as a Blog Post page.'
 
     SUBSCRIBE: Subscribe
     TWEET: Tweet
