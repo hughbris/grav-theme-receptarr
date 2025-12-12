@@ -287,22 +287,40 @@ vimeo: https://player.vimeo.com/video/63451562?title=0&amp;byline=0&amp;portrait
 
 ### Slideshow
 
-Add or modify this code in site.yaml:
+**The old way of setting up the slideshow has changed**, but your old setup should still function, at least for now.
+
+Slideshow settings and images have moved from `site.yaml` to the frontmatter and folder of the blog homepage.
+
+**The preferred new way:** Add your slideshow images to your site's main page, which should be of `blog` page type.
+
+If you're using the Admin interface, you'll see a 'Slider' tab when you are editing a page of `blog` type. It's easy from here to set up each slide using an image, some text, and a target for the link.
+
+![Screenshot showing Receptarr's slider configuration](receptarr-slider-admin.png)
+
+If you're just editing YAML, follow this template from the theme's demo content:
 
 ```yaml
 slider:
-  - image: slide3.jpg
-    title: A very delicious blog
-    url: "#"
-  - image: slide1.jpg
-    title: Duis autem
-    url: "#"
-  - image: slide2.jpg
-    title: Pumpkin recipe
-    url: "#"
+    # I don't know why they are in this order either!
+    -
+        image: slide3.jpg
+        title: A very delicious blog
+        url: '#'
+    -
+        image: slide1.jpg
+        title: Duis autem
+        url: '#'
+    -
+        image: slide2.jpg
+        title: Pumpkin recipe
+        url: '#'
 ```
 
-Slideshow images must be placed inside user theme **images/slideshow** directory.
+**The old way:** make sure your slideshow images are in the theme's `images/slideshow/` directory.
+Then add or modify your `site.yaml` file, _using the same YAML structure_ as the new way listed above.
+
+> ![WARNING]
+> Your slideshow will continue to work with the old configuration, but one day it might not …
 
 ### Featured image
 

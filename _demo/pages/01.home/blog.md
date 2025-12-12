@@ -20,4 +20,18 @@ feed:
     limit: 10
 
 pagination: true
+
+slider:
+    -
+        image: slide3.jpg
+        title: A very delicious blog
+        url: '#'
+    -
+        image: slide1.jpg
+        title: Duis autem
+        url: '#'
+    -
+        image: slide2.jpg
+        title: Pumpkin recipe
+        url: '#'
 ---

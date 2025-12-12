@@ -1,18 +1,27 @@
 <div id="site-banner" class="site-banner enable-slider">
   <div class="site-banner-inner">
-      {% for slide in site.slider %}
+      {% set slides = page.header.slider|default(site.slider) %}
+
+      {# continue to support legacy installations for now .. #}
+      {% if slides and not page.header.slider %}
+        {{ debug('Deprecated: homepage slider settings in site config')}}
+      {% endif %}
+
+      {% for slide in slides %}
       <article data-id="post-{{ loop.index }}" class="post-{{ loop.index }} post type-post status-publish format-standard has-post-thumbnail hentry tag-no-excerpt is-featured" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
             {% if slide.image %}
+              {% set src = page.header.slider ? page.media[slide.image].cropZoom(1920,640).url : "#{theme_url}/images/slideshow/#{slide.image}" %}
               <div class="site-banner-media">
                 <figure class="site-banner-thumbnail" itemprop="image">
-                  <img width="1920" height="640" src="{{ theme_url }}/images/slideshow/{{ slide.image }}" class="attachment-receptar-banner size-receptar-banner wp-post-image" alt="{{ slide.title }}"/>
+                  <img width="1920" height="640" src="{{ src }}" class="attachment-receptar-banner size-receptar-banner wp-post-image" alt="{{ slide.title }}"/>
                 </figure>
               </div>
             {% endif %}
             {% if slide.title %}
               <div class="site-banner-header">
                 <h1 class="entry-title" itemprop="name">
-                  <a href="{{ slide.url }}" class="highlight" rel="bookmark">{{ slide.title }}</a>
+                  {# maintain support for legacy slide.url for now .. #}
+                  <a href="{{ slide.target|default(slide.url) }}" class="highlight" rel="bookmark">{{ slide.title }}</a>
                 </h1>
               </div>
             {% endif %}

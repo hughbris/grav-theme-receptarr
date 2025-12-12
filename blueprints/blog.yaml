@@ -1,0 +1,61 @@
+title: Blog homepage
+'@extends':
+    type: default
+    context: blueprints://pages
+form:
+    fields:
+        tabs:
+            fields:
+                content:
+                    fields:
+                        content:
+                            unset@: true
+                            # NB. homepage content is currently ignored (not rendered)
+                        header.feature.source:
+                            unset@: true
+                        content.tips:
+                            type: display
+                            content: "**The Content field is removed** here because homepage content is currently ignored (not rendered).\n\nYou can set slide images, text, and links under the **Slider tab**.\n\nBlog post panels automatically show, starting from the most recent. You can set how many are shown by default below, under Pagination."
+                            markdown: true
+                            label: false
+                            classes: tip
+                            ordering@: header.title
+                        pagination:
+                            type: section
+                            title: Pagination
+                            ordering@: content.tips
+                            fields:
+                                header.content.limit:
+                                    type: number
+                                    label: Number of blog entry panels to show
+                                    classes: double-digit
+                slider:
+                    type: tab
+                    title: Slider
+                    ordering@: options
+                    fields:
+                        slider.tips:
+                            type: display
+                            content: "Upload and select Slider images from this page's Page Media.\n\nThe slide images you select will be **cropped** as required to fit a 3:1 width-to-height ratio, and also **scaled** automatically .\n\nTo avoid pixellation, their width should be **1920 pixels** or more. Height should be at least **640 pixels**."
+                            markdown: true
+                            label: false
+                            classes: tip
+                        header.slider:
+                            type: list
+                            label: Slides
+                            btnLabel: Add a slide
+                            fields:
+                                .image:
+                                    type: pagemediaselect
+                                    label: Slide image
+                                    multiple: false
+                                    validate: # TODO: or .. use the main image from the target page
+                                        required: true
+                                .title:
+                                    type: text
+                                    label: Title
+                                    validate:
+                                        required: true
+                                .url:
+                                    type: url
+                                    label: Link target
