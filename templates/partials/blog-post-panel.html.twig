@@ -21,7 +21,7 @@
         {# TODO: determine if @alt would add value here #}
         {{ figure.cropZoom(338,451).html(null, '', figure_classes)|raw }}
       {% else %}
-        {{ debug('partials/blog_item: No valid figure image found and no valid fallback or theme default!') }}
+        {{ debug('partials/blog-post-panel: No valid figure image found and no valid fallback or theme default!') }}
       {% endif %}
     </figure>
   </div>
