@@ -101,9 +101,11 @@
 
         {% if page.header.youtube or page.header.vimeo or page.header.soundcloud %}
         <div class="fit-vids-style">
-        <style>
-        .fluid-width-video-wrapper {width: 100%;position: relative;padding: 0;}                                                                                   .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed { position: absolute; top: 0;                                  left: 0; width: 100%; height: 100%;}
-        </style>
+        {% style %}
+        .fluid-width-video-wrapper {width: 100%;position: relative;padding: 0;}
+        .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object,
+        .fluid-width-video-wrapper embed { position: absolute; top: left: 0; width: 100%; height: 100%;}
+        {% endstyle %}
         </div>
 
         <div class="fl-row fl-row-full-width fl-row-bg-none" style="padding-bottom: 1.62rem;">
