@@ -1,3 +1,11 @@
+# v2.5.0
+## 12-12-2025
+
+1. [](#improved)
+    * **breaking:** footer template processes site copyright as markdown (b4ff562)
+    * fix spacing and tab formatting (#5) - YAML and PHP (2d075b9)
+    * rename item template, partial, and blueprint; backward compatible (c7c2989)
+
 # v2.4.1
 ## 10-12-2025
 
