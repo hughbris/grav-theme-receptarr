@@ -1,3 +1,9 @@
+# v2.5.1
+## 12-12-2025
+
+1. [](#bugfix)
+    * fixes following renaming in c7c2989 (cf2e673, 5d53d25)
+
 # v2.5.0
 ## 12-12-2025
 
