@@ -1,3 +1,17 @@
+# v2.6.0
+## 13-12-2025
+
+1. [](#improved)
+    * migrated slide media and configuration from `site.yaml` to frontmatter (c91bfa5)
+
+1. [](#new)
+    * media embed and recipe sections moved to partials and into Twig blocks (d57cdda)
+    * menu icon and submenu items support in navigation (842bb35)
+
+1. [](#bugfix)
+    * removed homepage slider title attribute (05151b1)
+    * embedded media CSS ~~break~~fix (~~3c86a05~~, b2c1754)
+
 # v2.5.1
 ## 12-12-2025
 
