@@ -1,7 +1,7 @@
 {% macro loop(page) %}
     {% for p in page.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'current-menu-item current_page_item' : '' %}
-        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }} {{ current_page }}">
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }} {{ current_page }} {{ p.children.visible.count > 0 ? 'menu-item-has-children' }}">
             <a href="{{ p.url }}">
                 {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
                 {{ p.menu }}
@@ -21,17 +21,37 @@
     {% else %}
         {% for page in pages.children.visible %}
             {% set current_page = (page.active or page.activeChild) ? 'current-menu-item current_page_item' : '' %}
-            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }} {{ current_page }}">
+            {% set child_items = site.menu|filter(m => (m.parent and m.parent == page.url)) %}
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }} {{ current_page }} {{ child_items ? 'menu-item-has-children' }}">
                 <a href="{{ page.url }}">
                     {{ page.menu }}
                 </a>
+                {% if child_items %}
+                    <ul>
+                    {% for mitem in child_items %}
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }}">
+                            <a href="{{ mitem.url }}">
+                                {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
+                                {{ mitem.text }}
+                                {% if mitem.description %}
+                                <span class="menu-item-description">{{ mitem.description }}</span>
+                                {% endif %}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
             </li>
         {% endfor %}
     {% endif %}
-    {% for mitem in site.menu %}
+    {% for mitem in site.menu|filter(m => m.parent is not defined) %}
         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-{{ loop.index }}">
             <a href="{{ mitem.url }}">
+              {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
               {{ mitem.text }}
+              {% if mitem.description %}
+              <span class="menu-item-description">{{ mitem.description }}</span>
+              {% endif %}
             </a>
         </li>
     {% endfor %}
