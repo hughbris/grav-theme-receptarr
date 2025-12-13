@@ -234,7 +234,7 @@ styles:
 
 Take a look at theme's **language.yaml**. The English version contains all variables which you can translate to your language.
 
-### Adding recipes to blog page
+### Adding recipes to blog pages
 
 In item.md page header you have to add something like that:
 
@@ -362,6 +362,19 @@ fallback_image:
 Note that blog post grid listings use images to preview each blog post. These listings use each blog post's featured image, determined by the same rules of precedence outined above.
 
 ![Screenshot of Receptarr's grid listing of blog post previews](receptarr-blog-post-panels.png)
+
+#### Customise media embed code
+
+Media embed code is a legacy feature still supported, but you may want to update the embed code completely.
+
+You can either override the template `partials/blog-post-panel-embeds.html.twig` _or_ override the Twig block `embeds` extending `partials/blog-post-panel.html.twig`.
+
+#### Customise recipe display
+
+[Recipes can be embedded in blog posts](#adding-recipes-to-blog-pages). You can easily customise how those recipes are displayed:
+
+* override the template `partials/blog-post-panel-recipe.html.twig`, _or_
+* extend `partials/blog-post-panel.html.twig` and override the Twig block `recipe`.
 
 ### Site icon ("favicon")
 
